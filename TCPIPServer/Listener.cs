@@ -19,7 +19,7 @@ namespace TCPIPServer
             {
                 // Set the TcpListener on port 13000.
                 Int32 port = 13000;
-                IPAddress localAddr = IPAddress.Parse("127.0.0.1");
+                IPAddress localAddr = IPAddress.Parse("10.144.125.2");
 
                 // TcpListener server = new TcpListener(port);
                 server = new TcpListener(localAddr, port);
@@ -77,6 +77,18 @@ namespace TCPIPServer
 
                 // Process the data sent by the client.
                 data = data.ToUpper();
+
+                if (data == "TIME")
+                {
+                    // data = GetCurrentTime;
+                }
+                else if (data == "OTHER")
+                {
+                    // other
+                }
+                else
+                {
+                }
 
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(data);
 
