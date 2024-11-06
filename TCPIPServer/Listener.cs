@@ -80,7 +80,9 @@ namespace TCPIPServer
 
                 if (data == "TIME")
                 {
-                    // data = GetCurrentTime;
+                    DateTime currentTime = DateTime.Now;
+
+                    data = currentTime.ToString();   
                 }
                 else if (data == "OTHER")
                 {
